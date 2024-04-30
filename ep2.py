@@ -40,6 +40,32 @@ def posicao_suporta(mapa_tab,num_blocos,linha,coluna,alocacao):
 
 import random
 
+##### Chamando função novamente #####
+
+def posicao_suporta(mapa_tab,num_blocos,linha,coluna,alocacao):
+    
+    for i in range(num_blocos):
+
+        if alocacao == 'h':
+
+            if linha >= len(mapa_tab) or coluna + i >= len(mapa_tab[linha]):
+                return False
+            
+            elif mapa_tab[linha][coluna + i] == 'N':
+                return False
+
+        elif alocacao == 'v':
+
+            if linha + i >= len(mapa_tab) or coluna >= len(mapa_tab[linha + i]):
+                return False
+
+            elif mapa_tab[linha + i][coluna] == 'N':
+                return False
+
+    return True
+
+#####################################
+
 def aloca_navios(mapa_alocacao,lista_blocos):
 
     for j in lista_blocos:
