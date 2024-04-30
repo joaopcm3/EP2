@@ -1,4 +1,6 @@
+###############
 ### FUNÇÔES ###
+###############
 
 ########### Cria matriz quadradadas de espaços ####################
 
@@ -65,3 +67,8 @@ def foi_derrotado(matriz):
                 return False
     
     return True
+
+############
+### JOGO ###
+############
+
