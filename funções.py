@@ -94,3 +94,4 @@ def foi_derrotado(matriz):
     
     return True
 
+
