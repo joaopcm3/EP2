@@ -9,7 +9,7 @@
 # Blue: \u001b[34m
 # Magenta: \u001b[35m
 # Cyan: \u001b[36m
-# White: \u001b[37m
+# White: \u001b[37m]
 # Reset: \u001b[0m
 
 CONFIGURACAO = {
