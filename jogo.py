@@ -251,3 +251,17 @@ info = '''
 '''
 
 print(f'{entrada}\n\n{alerta}\n{info}')
+
+##### ESCOLHA DO PAÍS DO PLAYER #####
+
+player = input('Qual o número da nação da sua frota? ')
+
+while player not in num_p:
+
+    print('Opção inválida')
+    player = input('Qual o número da nação da sua frota? ')
+
+print(f'Você escolheu a nação {paises[int(player)-1]}\nAgora é sua vez de colocar seus navios de guerra!')
+player_pais = paises[int(player)-1]
+
+espaco = '▓▓▓'
