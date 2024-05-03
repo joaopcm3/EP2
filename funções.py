@@ -94,4 +94,16 @@ def foi_derrotado(matriz):
     
     return True
 
+###### Espaçamento para mapa (função) ######
 
+def espacamento(n):
+    lista = []
+    contador_externo = 0
+    
+    while contador_externo < n:
+        contador_interno = 0
+        l = ['   '] * n
+        lista.append(l)
+        contador_externo += 1
+
+    return lista
