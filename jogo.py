@@ -181,3 +181,24 @@ def espacamento(n):
         contador_externo += 1
 
     return lista
+
+### ESCOLHA DO PAÍS DO COMP ###
+
+paises = ['Brasil', 'França', 'Austrália', 'Rússia', 'Japão']
+num_p = ['1', '2', '3', '4', '5']
+mapa = cria_mapa(10)
+barco_comp = []
+pais_comp = random.choice(paises)
+
+while pais_comp not in PAISES:
+    pais_comp = random.choice(paises)
+
+barcos_do_pais = PAISES[pais_comp]
+for barco in barcos_do_pais:
+    quantidade = barcos_do_pais[barco]
+    i = 0
+    while i < quantidade:
+        barco_comp.append(CONFIGURACAO[barco])
+        i += 1
+
+mapa_comp = aloca_navios(mapa, barco_comp)
