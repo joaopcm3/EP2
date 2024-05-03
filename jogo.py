@@ -80,24 +80,24 @@ def cria_mapa(N):
 
 ########### Navio pode ser alocado na posição ####################
 
-def posicao_suporta(mapa_tab,num_blocos,li,coluna,alocacao):
+def posicao_suporta(mapa_tab,num_blocos,li,col,alocacao):
     
     for i in range(num_blocos):
 
         if alocacao == 'h':
 
-            if li >= len(mapa_tab) or coluna + i >= len(mapa_tab[li]):
+            if li >= len(mapa_tab) or col + i >= len(mapa_tab[li]):
                 return False
             
-            elif mapa_tab[li][coluna + i] == 'N':
+            elif mapa_tab[li][col + i] == 'N':
                 return False
 
         elif alocacao == 'v':
 
-            if li + i >= len(mapa_tab) or coluna >= len(mapa_tab[li + i]):
+            if li + i >= len(mapa_tab) or col >= len(mapa_tab[li + i]):
                 return False
 
-            elif mapa_tab[li + i][coluna] == 'N':
+            elif mapa_tab[li + i][col] == 'N':
                 return False
 
     return True
@@ -108,24 +108,24 @@ import random
 
 ##### Chamando função novamente #####
 
-def posicao_suporta(mapa_tab,num_blocos,li,coluna,alocacao):
+def posicao_suporta(mapa_tab,num_blocos,li,col,alocacao):
     
     for i in range(num_blocos):
 
         if alocacao == 'h':
 
-            if li >= len(mapa_tab) or coluna + i >= len(mapa_tab[li]):
+            if li >= len(mapa_tab) or col + i >= len(mapa_tab[li]):
                 return False
             
-            elif mapa_tab[li][coluna + i] == 'N':
+            elif mapa_tab[li][col + i] == 'N':
                 return False
 
         elif alocacao == 'v':
 
-            if li + i >= len(mapa_tab) or coluna >= len(mapa_tab[li + i]):
+            if li + i >= len(mapa_tab) or col >= len(mapa_tab[li + i]):
                 return False
 
-            elif mapa_tab[li + i][coluna] == 'N':
+            elif mapa_tab[li + i][col] == 'N':
                 return False
 
     return True
@@ -139,14 +139,14 @@ def aloca_navios(mapa_alocacao,lista_blocos):
         while dps == False:
             n = len(mapa_alocacao)
             li = random.randint(0, n-1)
-            coluna = random.randint(0, n-1)
+            col = random.randint(0, n-1)
             alocacao = random.choice(['h', 'v'])
-            dps = posicao_suporta(mapa_alocacao,j,li,coluna,alocacao)
+            dps = posicao_suporta(mapa_alocacao,j,li,col,alocacao)
         for i in range (j):
             if alocacao == 'v':
-                mapa_alocacao[li + i][coluna] = 'N'
+                mapa_alocacao[li + i][col] = 'N'
             elif alocacao == 'h':
-                mapa_alocacao[li][coluna + i] = 'N'
+                mapa_alocacao[li][col + i] = 'N'
     return mapa_alocacao
 
 ########### Verificando se acabou os 'N's da matriz ####################
@@ -164,7 +164,7 @@ def foi_derrotado(matriz):
 ### JOGO ###
 ############
 
-##### Biblioteca para tempo #####
+##### BIBLIOTECA PARA TEMPO #####
 
 import time
 
