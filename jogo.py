@@ -508,3 +508,34 @@ while reinicio == 's':
         alfabeto1 = {}
         for key,valor in alfabeto.items():
             alfabeto1[valor+1] = key
+#####################################################
+
+        if player_map[li][col] == 'A':
+            jog = 'Água!'
+
+        elif player_map[li][col] == 'B':
+            jog = 'BOOOOOOMMMMMM!'
+        
+        if mapa_comp[l][t] == 'A':
+            pc = 'Água!'
+
+        elif mapa_comp[l][t] == 'B':
+            pc = 'BOOOOOOMMMMMM!'
+
+
+        print(f'Jogador ---->>>> {le1}{li1}    {pc}\nComputador ---->>>> {alfabeto1[col+1]}{li+1}    {jog}')
+
+        player_win = foi_derrotado(mapa_comp)
+        comp_win = foi_derrotado(player_map)
+
+        if player_win == True:
+            print('Você venceu!\nTemos um novo xerife nos mares!')
+
+        elif comp_win == True:
+            print('Você perdeu!\nO computador ainda é o senhor dos mares')
+
+    reinicio = (input('Jogar novamente? [s/n] ')).lower()
+    comp_win = False
+    player_win = False
+    
+print('\n\nAté a proxima!')
