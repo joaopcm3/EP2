@@ -402,3 +402,16 @@ for i in range(len(colocar)):
         elif orientacao == 'h':
             player_map[l][t+i] = 'N'
             aparencia_player[l][t+i] = f'\u001b[32m{espaco}\u001b[0m'
+
+############ INICIALIZAÇÃO DO TEMPO ####################
+
+print('Iniciando batalha naval!')
+
+t_lista = [5,4,3,2,1]
+
+for t in t_lista:
+    print(t)
+    time.sleep(1)
+
+comp_win = False
+player_win = False
