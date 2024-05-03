@@ -265,3 +265,18 @@ print(f'Você escolheu a nação {paises[int(player)-1]}\nAgora é sua vez de co
 player_pais = paises[int(player)-1]
 
 espaco = '▓▓▓'
+
+##### CRIAÇÃO DE MAPA #####
+
+aparencia_player = espacamento(10)
+aparencia_comp = espacamento(10)
+player_map = cria_mapa(10)
+
+colocar = []
+barcos_do_pais = PAISES[player_pais]
+for barco in barcos_do_pais:
+    quantidade = barcos_do_pais[barco]
+    i = 0
+    while i < quantidade:
+        colocar.append(barco)
+        i += 1
