@@ -362,3 +362,20 @@ for i in range(len(colocar)):
 
         if posicao == False:
             print(f'Não foi possivel posicionar o barco em {le}{li} {orientacao}')
+
+
+################# REPRESENTAÇÃO DO MAPA (PRINT) ##################
+
+            exibicao = [f'''  COMPUTADOR - {pais_comp}                   JOGADOR - {player_pais}
+     A  B  C  D  E  F  G  H  I  J          A  B  C  D  E  F  G  H  I  J ''']
+            for i in range(9):
+
+                exibicao.append(f'  {i+1} {aparencia_comp[i][0]}{aparencia_comp[i][1]}{aparencia_comp[i][2]}{aparencia_comp[i][3]}{aparencia_comp[i][4]}{aparencia_comp[i][5]}{aparencia_comp[i][6]}{aparencia_comp[i][7]}{aparencia_comp[i][8]}{aparencia_comp[i][9]} {i+1}    {i+1} {aparencia_player[i][0]}{aparencia_player[i][1]}{aparencia_player[i][2]}{aparencia_player[i][3]}{aparencia_player[i][4]}{aparencia_player[i][5]}{aparencia_player[i][6]}{aparencia_player[i][7]}{aparencia_player[i][8]}{aparencia_player[i][9]} {i+1}')
+            
+            i+=1
+
+            exibicao.append(f' 10 {aparencia_comp[i][0]}{aparencia_comp[i][1]}{aparencia_comp[i][2]}{aparencia_comp[i][3]}{aparencia_comp[i][4]}{aparencia_comp[i][5]}{aparencia_comp[i][6]}{aparencia_comp[i][7]}{aparencia_comp[i][8]}{aparencia_comp[i][9]} 10  10 {aparencia_player[i][0]}{aparencia_player[i][1]}{aparencia_player[i][2]}{aparencia_player[i][3]}{aparencia_player[i][4]}{aparencia_player[i][5]}{aparencia_player[i][6]}{aparencia_player[i][7]}{aparencia_player[i][8]}{aparencia_player[i][9]} 10')
+            exibicao.append('     A  B  C  D  E  F  G  H  I  J          A  B  C  D  E  F  G  H  I  J')
+            
+            for x in exibicao:
+                print(x)
