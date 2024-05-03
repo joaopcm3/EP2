@@ -202,3 +202,52 @@ for barco in barcos_do_pais:
         i += 1
 
 mapa_comp = aloca_navios(mapa, barco_comp)
+
+### ENTRADA DO JOGO ###
+
+entrada = ''' ===================================== 
+|                                     |
+| Bem-vindo ao INSPER - Batalha Naval |
+|                                     |
+ =======   xxxxxxxxxxxxxxxxx   ======= '''
+
+alerta = f'Iniciando o jogo!\n\nComputador está alocando os navios de guerra do país {pais_comp}...\nComputador já está em posição de batalha!'
+
+info = '''
+1: Brasil
+   1 cruzador
+   2 torpedeiro
+   1 destroyer
+   1 couracado
+   1 porta-avioes
+
+2: França
+   3 cruzador
+   1 porta-avioes
+   1 destroyer
+   1 submarino
+   1 couracado
+
+3: Austrália
+   1 couracado
+   3 cruzador
+   1 submarino
+   1 porta-avioes
+   1 torpedeiro
+
+4: Rússia
+   1 cruzador
+   1 porta-avioes
+   2 couracado
+   1 destroyer
+   1 submarino
+
+5: Japão
+   2 torpedeiro
+   1 cruzador
+   2 destroyer
+   1 couracado
+   1 submarino
+'''
+
+print(f'{entrada}\n\n{alerta}\n{info}')
