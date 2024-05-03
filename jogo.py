@@ -437,3 +437,51 @@ while reinicio == 's':
             print(x)
 
         print('Cordenadas do seu disparo')
+
+####### PLAYER BOMB #######
+
+        posicao = False
+
+        while posicao == False:
+            t = False
+
+            while t == False:
+                le = input('Informe a letra: ')
+                le = le.upper()
+
+                if le not in alfabeto:
+                    print('Letra inválida')
+
+                else:
+                    t = True
+            
+            t = False
+
+            while t == False:
+                li = input('Informe a linha: ')
+
+                if li not in alfabeto_num:
+                    print('Linha inválida')
+
+                else:
+                    t = True
+
+            l = int(li)-1
+            t = alfabeto[le]
+
+            if mapa_comp[l][t] != 'B' and mapa_comp[l][t] != 'A':
+                posicao = True
+
+            else:
+                print(f'Posição {le}{li} já Bombardeada!')
+
+        if mapa_comp[l][t] == 'N':
+            mapa_comp[l][t] = 'B'
+            aparencia_comp[l][t] = f'\u001b[31m{espaco}\u001b[0m'
+        
+        else:
+            mapa_comp[l][t] = 'A'
+            aparencia_comp[l][t] = f'\u001b[34m{espaco}\u001b[0m'
+
+        le1 = le
+        li1 = li
