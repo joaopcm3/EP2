@@ -298,3 +298,67 @@ for i in range(len(colocar)):
     
     for x in exibicao:
         print(x)
+
+#####################################################
+
+    cubo = CONFIGURACAO[colocar[0]]
+
+    print(f'Alocar: {colocar[0]} ({cubo} blocos)')
+    
+    del colocar[0]
+    if len(colocar) > 0:
+        perto = colocar[0]
+    
+        for i in range(1,len(colocar)):
+            perto += ', ' + colocar[i]
+    
+        print(f'Próximos: {perto}')
+
+    posicao = False
+
+    while posicao == False:
+
+        t = False
+
+        while t == False:
+
+            le = input('Informe a letra: ')
+            le = le.upper()
+
+            if le not in alfabeto:
+                print('Letra inválida')
+
+            else:
+                t = True
+        
+        t = False
+
+        while t == False:
+
+            li = input('Informe a linha: ')
+
+            if li not in alfabeto_num:
+                print('Linha inválida')
+
+            else:
+                t = True
+
+        t = False
+
+        while t == False:
+
+            orientacao = input('Informe a orientação [v/h]: ')
+            orientacao.lower()
+           
+            if orientacao != 'v' and orientacao != 'h':
+                print('Orientação inválida')
+
+            else:
+                t = True
+
+        l = int(li)-1
+        t = alfabeto[le]
+        posicao = posicao_suporta(player_map,cubo,l,t,orientacao)
+
+        if posicao == False:
+            print(f'Não foi possivel posicionar o barco em {le}{li} {orientacao}')
