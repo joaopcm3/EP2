@@ -485,3 +485,26 @@ while reinicio == 's':
 
         le1 = le
         li1 = li
+
+########## COMPUTER BOMB ##########
+
+        dps = False
+
+        while dps == False:
+            li = random.randint(0, 9)
+            col = random.randint(0, 9)
+
+            if player_map[li][col] == ' ' or player_map[li][col] == 'N':
+                dps = True
+
+                if player_map[li][col] == 'N':
+                    player_map[li][col] = 'B'
+                    aparencia_player[li][col] = f'\u001b[31m{espaco}\u001b[0m'
+                
+                elif player_map[li][col] == ' ':
+                    player_map[li][col] = 'A'
+                    aparencia_player[li][col] = f'\u001b[34m{espaco}\u001b[0m'
+            
+        alfabeto1 = {}
+        for key,valor in alfabeto.items():
+            alfabeto1[valor+1] = key
