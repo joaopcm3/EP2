@@ -378,3 +378,27 @@ for i in range(len(colocar)):
             
             for x in exibicao:
                 print(x)
+
+#####################################################################
+
+            print(f'Alocar: {colocar[0]} ({cubo} blocos)')
+
+            if len(colocar) > 0:
+                perto = colocar[0]
+
+                for i in range(1,len(colocar)):
+                    perto += ', ' + colocar[i]
+
+                print(f'Próximos: {perto}')
+
+    print('Navio alocado!')
+
+    for i in range(cubo):
+
+        if orientacao == 'v':
+            player_map[l+i][t] = 'N'
+            aparencia_player[l+i][t] = f'\u001b[32m{espaco}\u001b[0m'
+
+        elif orientacao == 'h':
+            player_map[l][t+i] = 'N'
+            aparencia_player[l][t+i] = f'\u001b[32m{espaco}\u001b[0m'
